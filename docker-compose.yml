@@ -13,14 +13,9 @@ services:
     ports:
       - 9999:8080
     container_name: tomcat
-    # volumes:
-            #    - /tmp/jenkins:/var/jenkins_home #Remember that, the tmp directory is designed to be wiped on system reboot.
-            #  - /var/run/docker.sock:/var/run/docker.sock
     depends_on:
       - jenkins
     links:
       - jenkins
     volumes: 
       - /Users/m.zeineldin/Projects/project-B/jenkins/workspace/java/target:/usr/local/tomcat/webapps
-        #volumes:
-        #  /Users/m.zeineldin/Project/project-B/jenkins
